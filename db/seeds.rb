@@ -31,13 +31,21 @@
 # Event.create(category:'Sports & Social', sub_category1:'Misc.', year:'2016', approval:true)
 
 5.times do
-  Event.create({
-                   title: Faker::Book.title,
-                   category: Faker::Book.genre,
-                   sub_category1: Faker::Book.genre,
-                   year: Faker::Lorem.words,
-                   month:Faker::Lorem.words,
-                   approval: true,
+  # Event.create({
+  #                  title: Faker::Book.title,
+  #                  category: Faker::Book.genre,
+  #                  sub_category1: Faker::Book.genre,
+  #                  year: Faker::Lorem.word,
+  #                  month:Faker::Lorem.word,
+  #                  approval: true,
+  #
+  #              })
 
+  MediaFile.create({
+                       filename: Faker::Book.genre,
+                       s3_location: Faker::Team.creature,
+                       approval: true,
+                       flagged: true,
+                       Event_id: 3, #common sense but event must exist
                })
 end

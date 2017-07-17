@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.3'
 
 gem 'mysql2'
+gem 'jbuilder'
 
 
 group :development, :test do
@@ -19,6 +20,7 @@ end
 
 group :development do
   gem 'faker'
+
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
