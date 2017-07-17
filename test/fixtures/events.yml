@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category: MyString
+  sub_category1: MyString
+  year: MyString
+  month: MyString
+  approval: false
+
+two:
+  title: MyString
+  category: MyString
+  sub_category1: MyString
+  year: MyString
+  month: MyString
+  approval: false

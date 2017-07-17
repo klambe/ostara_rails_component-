@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# rails g model Event title:string category:string sub_category1:string year:string month:string approval:boolean

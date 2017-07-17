@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  s3_location: MyString
+  approval: false
+  flagged: false
+  Event: one
+
+two:
+  filename: MyString
+  s3_location: MyString
+  approval: false
+  flagged: false
+  Event: two
