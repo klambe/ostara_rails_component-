@@ -12,16 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170717120713) do
 
-  create_table "employee", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "username",       limit: 100, null: false
-    t.string "password",       limit: 100, null: false
-    t.string "email",          limit: 100, null: false
-    t.string "role",           limit: 100, null: false
-    t.string "profilePicture", limit: 500
-    t.string "department",     limit: 100
-  end
-
-  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
     t.string   "category"
     t.string   "sub_category1"
@@ -32,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170717120713) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "media_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "media_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "filename"
     t.string   "s3_location"
     t.boolean  "approval"
@@ -43,10 +34,5 @@ ActiveRecord::Schema.define(version: 20170717120713) do
     t.index ["Event_id"], name: "index_media_files_on_Event_id", using: :btree
   end
 
-  create_table "task", primary_key: "Id", id: :string, limit: 50, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "Title",  limit: 500
-    t.string "Status", limit: 100
-  end
-
-  add_foreign_key "media_files", "events", column: "Event_id"
+  add_foreign_key "media_files", "Events"
 end
